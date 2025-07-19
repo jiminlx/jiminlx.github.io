@@ -89,6 +89,8 @@ h4 {
   padding: 3px;
 }
 
+
+
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
@@ -232,6 +234,7 @@ h4 {
     border-bottom-color: #33c3f0;
   }
 }
+
 
 /* Education Styling */
 .edu-entry {
