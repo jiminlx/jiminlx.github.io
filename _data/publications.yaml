@@ -1,8 +1,6 @@
 papers:
-  - title: "Item Cold-Start Recommendations: Learning Local Collective Embeddings"
-    authors: "<b>Martin Saveski</b>, Amin Mantrach."
-    venue: "RecSys'14, ACM Conference Series on Recommender Systems. 2014."
-    paper_pdf: "/assets/publications/2014_item_cold_start/paper.pdf"
-    slides: "/assets/publications/2014_item_cold_start/slides.pdf"
-    code: "https://github.com/msaveski/LCE"
+  - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
+    authors: "Daewon Choi, <b>Jimin Lee</b>, Jihoon Tack, Woomin Song, Saket Dingliwal, Sai Muralidhar Jayanthi, Bhavana Ganesh, Jinwoo Shin, Aram Galstyan, Sravan Babu Bodapati"
+    venue: "ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
+    paper_pdf: "https://arxiv.org/abs/2507.08806"
     selected: y
