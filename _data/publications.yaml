@@ -2,7 +2,7 @@ papers:
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
     authors: |
       [Daewon Choi](https://choidae1.github.io/), 
-      [**Jimin Lee**], 
+      **Jimin Lee**, 
       Jihoon Tack, 
       Woomin Song, 
       Saket Dingliwal, 
