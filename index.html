@@ -38,7 +38,7 @@ title: Home
       "selected", "y" %} {% for paper in selected_papers %}
       <div class="paper">
         <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors }}</p>
+        <p>{{ paper.authors | markdownify }}</p>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
@@ -115,4 +115,3 @@ title: Home
     </div>
   </div>
 </div>
-

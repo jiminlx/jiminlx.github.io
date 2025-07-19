@@ -1,6 +1,16 @@
 papers:
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
-    authors: "Daewon Choi, **Jimin Lee**, Jihoon Tack, Woomin Song, Saket Dingliwal, Sai Muralidhar Jayanthi, Bhavana Ganesh, Jinwoo Shin, Aram Galstyan, Sravan Babu Bodapati"
+    authors: |
+      [Daewon Choi](https://choidae1.github.io/), 
+      [**Jimin Lee**], 
+      Jihoon Tack, 
+      Woomin Song, 
+      Saket Dingliwal, 
+      Sai Muralidhar Jayanthi, 
+      Bhavana Ganesh, 
+      Jinwoo Shin, 
+      Aram Galstyan, 
+      Sravan Babu Bodapati
     venue: "ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
     paper_pdf: "https://arxiv.org/abs/2507.08806"
     selected: y
