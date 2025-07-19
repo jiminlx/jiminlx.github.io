@@ -71,6 +71,19 @@ h4 {
   padding: 3px;
 }
 
+
+a.highlight-link {
+  font-weight: bold;
+  color: #dd7a1d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.highlight-link:hover {
+  color: #33C3F0;
+}
+
+
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
@@ -190,4 +203,5 @@ h4 {
   .popover-link:hover,
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
+  
 }
