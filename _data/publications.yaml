@@ -1,15 +1,15 @@
 papers:
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
     authors: |
-      [Daewon Choi](https://choidae1.github.io/),  
-      <u><strong>Jimin Lee</strong></u>,  
-      [Jihoon Tack](https://jihoontack.github.io/),  
-      [Woomin Song](https://woominsong.github.io/),  
-      [Saket Dingliwal](https://www.linkedin.com/in/saket-dingliwal/),  
-      [Sai Muralidhar Jayanthi](https://www.linkedin.com/in/sai-murali/),  
-      [Bhavana Ganesh](https://www.linkedin.com/in/bhavanaganesh/),  
-      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html),  
-      [Aram Galstyan](https://www.isi.edu/people-galstyan/),  
+      [Daewon Choi](https://choidae1.github.io/), 
+      <u><strong>Jimin Lee</strong></u>, 
+      [Jihoon Tack](https://jihoontack.github.io/), 
+      [Woomin Song](https://woominsong.github.io/), 
+      [Saket Dingliwal](https://www.linkedin.com/in/saket-dingliwal/), 
+      [Sai Muralidhar Jayanthi](https://www.linkedin.com/in/sai-murali/), 
+      [Bhavana Ganesh](https://www.linkedin.com/in/bhavanaganesh/), 
+      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html), 
+      [Aram Galstyan](https://www.isi.edu/people-galstyan/), 
       [Sravan Babu Bodapati](https://www.linkedin.com/in/justsravan/)
     venue: "ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
     paper_pdf: "https://arxiv.org/abs/2507.08806"
