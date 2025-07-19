@@ -79,7 +79,7 @@ title: Home
       {% for paper in site.data.publications.papers %}
       <div class="paper">
         <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors }}</p>
+        <p>{{ paper.authors | markdownify }}</p>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
@@ -120,20 +120,19 @@ title: Home
 <!-- ========== EDUCATION ========== -->
 <div class="docs-section" id="education">
   <h4>Education</h4>
-  {% for edu in site.data.main_info.education %}
+  {% for edu in site.data.education.education %}
   <p>
     <b>{{ edu.school }}</b><br />
     {{ edu.degree }}<br />
     {{ edu.start_date }} – {{ edu.end_date }}<br />
-    GPA: {{ edu.gpa }}
   </p>
   {% endfor %}
 </div>
 
 <!-- ========== EXPERIENCE ========== -->
-<div class="docs-section" id="experience">
+<div class="docs-section" id="experiences">
   <h4>Experience</h4>
-  {% for exp in site.data.main_info.experiences %}
+  {% for exp in site.data.experience.experiences %}
   <p>
     <b>{{ exp.title }}</b> @ {{ exp.place }}<br />
     {{ exp.subtitle }}<br />
@@ -145,7 +144,15 @@ title: Home
 <!-- ========== HONORS & AWARDS ========== -->
 <div class="docs-section" id="awards">
   <h4>Honors & Awards</h4>
-  {% for award in site.data.main_info.awards %}
+  {% for award in site.data.honors_ands_awards.honors_ands_awards %}
   <p>• {{ award }}</p>
+  {% endfor %}
+</div>
+
+<!-- ========== ACADEMIC SERVICES =========-->
+<div class="docs-section" id="academic-services">
+  <h4>Academic Services</h4>
+  {% for service in site.data.academic_services.academic_services %}
+  <p>• {{ service }}</p>
   {% endfor %}
 </div>
