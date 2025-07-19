@@ -109,8 +109,7 @@
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" | prepend: site.baseurl }}>Publications</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#education" | prepend: site.baseurl }}>Education</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#experience" | prepend: site.baseurl }}>Experience</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#honors_and_rewards" | prepend: site.baseurl }}>Honors and rewards</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" | prepend: site.baseurl }}>Vita</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#honors_and_rewards" | prepend: site.baseurl }}>Honors & rewards</a></li>
         </ul>
       </div>
     </nav>
@@ -126,12 +125,8 @@
           {{ site.data.main_info.email }}
         </div>
         <div class="four columns">
-          <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor: pointer">
-            <i class="fa-brands fa-bluesky fa-sm" style="padding-top: 10px"></i>
-          </span>
-
           <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
-            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
           </span>
 
           <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
@@ -139,7 +134,7 @@
           </span>
 
           <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-square-github"></i>
           </span>
 
           <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
