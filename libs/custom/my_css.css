@@ -89,16 +89,7 @@ h4 {
   padding: 3px;
 }
 
-a {
-  font-weight: bold;
-  color: #dd7a1d;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
 
-a:hover {
-  color: #33c3f0;
-}
 
 /* Larger than phone */
 @media (min-width: 550px) {
