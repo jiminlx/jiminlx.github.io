@@ -89,8 +89,6 @@ h4 {
   padding: 3px;
 }
 
-
-
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
@@ -233,4 +231,25 @@ h4 {
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33c3f0;
   }
+}
+
+/* Education Styling */
+.edu-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.edu-left {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.edu-right {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
 }

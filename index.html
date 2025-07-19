@@ -121,13 +121,18 @@ title: Home
 <div class="docs-section" id="education">
   <h4>Education</h4>
   {% for edu in site.data.education.education %}
-  <p>
-    <b>{{ edu.school }}</b><br />
-    {{ edu.degree }}<br />
-    {{ edu.start_date }} – {{ edu.end_date }}<br />
-  </p>
+  <div class="edu-entry">
+    <div class="edu-left">
+      <b>{{ edu.school }}</b><br />
+      {{ edu.degree }}
+    </div>
+    <div class="edu-right">
+      {{ edu.start_date }} – {{ edu.end_date }}
+    </div>
+  </div>
   {% endfor %}
 </div>
+
 
 <!-- ========== EXPERIENCE ========== -->
 <div class="docs-section" id="experiences">
