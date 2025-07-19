@@ -7,10 +7,10 @@ title: Home
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
   <p>
-    I am an incoming M.S. & Ph.D. student at 
-    <a href="https://alinlab.kaist.ac.kr/" target="_blank">ALINLAB</a>, 
-    advised by Prof.Jinwoo Shin at KAIST. I received my B.S. in Computer Science & Engineering at Korea
-    University in 2025.
+    I am an incoming M.S. & Ph.D. student at
+    <a href="https://alinlab.kaist.ac.kr/" target="_blank">ALINLAB</a>, advised
+    by Prof.Jinwoo Shin at KAIST. I received my B.S. in Computer Science &
+    Engineering at Korea University in 2025.
   </p>
 </div>
 
@@ -115,4 +115,37 @@ title: Home
       {% endfor %}
     </div>
   </div>
+</div>
+
+<!-- ========== EDUCATION ========== -->
+<div class="docs-section" id="education">
+  <h4>Education</h4>
+  {% for edu in site.data.main_info.education %}
+  <p>
+    <b>{{ edu.school }}</b><br />
+    {{ edu.degree }}<br />
+    {{ edu.start_date }} – {{ edu.end_date }}<br />
+    GPA: {{ edu.gpa }}
+  </p>
+  {% endfor %}
+</div>
+
+<!-- ========== EXPERIENCE ========== -->
+<div class="docs-section" id="experience">
+  <h4>Experience</h4>
+  {% for exp in site.data.main_info.experiences %}
+  <p>
+    <b>{{ exp.title }}</b> @ {{ exp.place }}<br />
+    {{ exp.subtitle }}<br />
+    {{ exp.time }}
+  </p>
+  {% endfor %}
+</div>
+
+<!-- ========== HONORS & AWARDS ========== -->
+<div class="docs-section" id="awards">
+  <h4>Honors & Awards</h4>
+  {% for award in site.data.main_info.awards %}
+  <p>• {{ award }}</p>
+  {% endfor %}
 </div>
