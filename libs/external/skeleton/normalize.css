@@ -433,14 +433,6 @@ th {
   margin-right: 10px;
 }
 
-.social-icons i {
-  color: #666666; /* 연한 회색 */
-}
-
-.social-icons i:hover {
-  color: #000000; /* 호버 시 검정으로 */
-}
-
 .ai-google-scholar {
   background-color: #000000;
   color: #ffffff;
