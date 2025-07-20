@@ -1,6 +1,11 @@
 education: 
+  - school: "Korea Advanced Institute of Science and Technology (KAIST)"
+    degree: "M.S./Ph.D student in Artificial Intelligence"
+    start_date: "Sep. 2025"
+    end_date: ""
+
   - school: "Korea University"
-    degree: "B.s. in Computer Science & Engineering"
+    degree: "B.S. in Computer Science & Engineering"
     start_date: "Feb. 2020"
     end_date: "Aug. 2025"
 
