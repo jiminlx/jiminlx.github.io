@@ -433,8 +433,9 @@ th {
   margin-right: 2px;
 }
 
-.ai-google-scholar::before {
+.google-scholar-icon i {
   color: #ffffff !important;
   background-color: #666666;
   border-radius: 4px;
+  font-size: 32px;
 }
