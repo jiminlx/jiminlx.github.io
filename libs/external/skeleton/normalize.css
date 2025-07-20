@@ -435,12 +435,11 @@ th {
 
 .ai-google-scholar {
   background-color: #666666;
-  padding: 4px;
+  padding: 2px;
   border-radius: 4px;
   line-height: 1;
   vertical-align: middle;
   display: inline-block;
-  position: relative;
 }
 
 /* 핵심: 아이콘 실제 색은 ::before로 들어감 */
