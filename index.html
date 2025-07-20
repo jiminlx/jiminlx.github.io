@@ -161,6 +161,10 @@ title: Home
 <div class="docs-section" id="academic-services">
   <h4>Academic Services</h4>
   {% for service in site.data.academic_services.academic_services %}
-  <p>• {{ service }}</p>
+    {% if service contains "Workshop Reviewer" %}
+      <p>• <strong>{{ service }}</strong></p>
+    {% else %}
+      <p>• {{ service }}</p>
+    {% endif %}
   {% endfor %}
 </div>
