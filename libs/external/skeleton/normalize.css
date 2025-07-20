@@ -430,13 +430,13 @@ th {
 .social-icons i {
   font-size: 28px; /* 원하는 크기 */
   color: #666666; /* 회색 */
-  margin-right: 10px;
+  margin-right: 2px;
 }
 
 .ai-google-scholar {
-  background-color: #000000;
+  background-color: #666666;
   color: #ffffff;
   padding: 4px;
   border-radius: 4px;
-  font-size: 28px;
+  font-size: 24px;
 }
