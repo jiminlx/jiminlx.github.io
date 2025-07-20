@@ -1,1 +1,4 @@
-honors_and_awards:
+honors_ands_awards:
+  - title: "2nd Place"
+    description: "CVPR Workshop 2024 SoccerNet Challenge Multi-View Foul Recognition"
+    date: "Jun. 2024"
