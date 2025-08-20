@@ -13,7 +13,7 @@ papers:
       [Sravan Babu Bodapati](https://www.linkedin.com/in/justsravan/)
     venue: "ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
     paper_pdf: "https://arxiv.org/abs/2507.08806"
-    poster_pdf: "assets/poster/think-clearly_poster.pdf"
+    poster: "assets/poster/think-clearly_poster.pdf"
     selected: y
 
   - title: "SoccerNet 2024 Challenges Results"
