@@ -11,7 +11,8 @@ papers:
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html), 
       [Aram Galstyan](https://www.isi.edu/people-galstyan/), 
       [Sravan Babu Bodapati](https://www.linkedin.com/in/justsravan/)
-    venue: "ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025\nConference on Empirical Methods in Natural Language Processing (EMNLP), 2025 (findings)"
+    venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025 (Findings)"
+    venue: "ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
     paper_pdf: "https://arxiv.org/abs/2507.08806"
     poster: "assets/poster/think-clearly_poster.pdf"
     selected: y
