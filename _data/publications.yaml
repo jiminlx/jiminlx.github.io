@@ -20,3 +20,4 @@ papers:
     authors: SoccerNet Challenge Participants
     venue: "CVPR Workshop on SoccerNet Challenge, 2024"
     paper_pdf: "https://arxiv.org/abs/2409.10587"
+    selected: y
