@@ -1,17 +1,15 @@
 papers:
   - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
     authors: |
-      Taeyoung Kim, 
+      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/), 
       <u><strong>Jimin Lee</strong></u>, 
-      Myungkyu Koo, 
-      Dongyoung Kim, 
-      Kyungmin Lee, 
-      Changyeon Kim, 
-      Younggyo Seo, 
+      [Myungkyu Koo](https://www.linkedin.com/in/myungkyukoo/), 
+      [Dongyoung Kim](https://kingdy2002.github.io/), 
+      [Kyungmin Lee](https://kyungmnlee.github.io/), 
+      [Changyeon Kim](https://changyeon.site/), 
+      [Younggyo Seo](https://younggyo.me/), 
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
     venue: "Preprint"
-    paper_pdf: ""
-    poster: ""
     selected: y
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
     authors: |
