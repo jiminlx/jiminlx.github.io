@@ -10,7 +10,9 @@ papers:
       [Younggyo Seo](https://younggyo.me/), 
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
     venue: "Preprint"
+    paper_pdf: "https://arxiv.org/abs/2510.01711"
     selected: y
+    
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
     authors: |
       [Daewon Choi](https://choidae1.github.io/), 
