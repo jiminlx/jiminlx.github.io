@@ -1,7 +1,8 @@
 honors_and_awards:
-  - title: "2nd Place"
-    description: "CVPR Workshop 2024 SoccerNet Challenge Multi-View Foul Recognition"
-    date: "Jun. 2024"
   - title: "Recipient"
     description: "Excellent Master’s Scholarship (STEM)"
     date: "Dec. 2025"
+  - title: "2nd Place"
+    description: "CVPR Workshop 2024 SoccerNet Challenge Multi-View Foul Recognition"
+    date: "Jun. 2024"
+  
