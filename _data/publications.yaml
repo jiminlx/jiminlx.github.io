@@ -1,13 +1,13 @@
 papers:
-  - title: "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models"
-    authors: |
-      <u><strong>Jimin Lee</strong></u>, 
-      [Huiwon Jang](https://huiwon-jang.github.io/),
-      [Myungkyu Koo](https://myungkyukoo.github.io/),
-      Jungwoo Park,
-      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
-    venue: "Preprint"
-    selected: y
+  # - title: "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models"
+  #   authors: |
+  #     <u><strong>Jimin Lee</strong></u>, 
+  #     [Huiwon Jang](https://huiwon-jang.github.io/),
+  #     [Myungkyu Koo](https://myungkyukoo.github.io/),
+  #     Jungwoo Park,
+  #     [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
+  #   venue: "Preprint"
+  #   selected: y
     
   - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
     authors: |
