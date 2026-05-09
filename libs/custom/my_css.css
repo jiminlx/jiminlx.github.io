@@ -2,7 +2,7 @@ h4 {
   letter-spacing: 0.1rem;
 }
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 .header {
   margin-top: 60px;
@@ -20,7 +20,35 @@ h4 {
   margin-top: 5px;
 }
 .paper {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+.paper.has-thumbnail {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.paper-thumbnail {
+  flex: 0 0 30%;
+  max-width: 220px;
+}
+.paper-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+.paper-content {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 550px) {
+  .paper.has-thumbnail {
+    flex-direction: column;
+  }
+  .paper-thumbnail {
+    flex-basis: auto;
+    max-width: 100%;
+  }
 }
 .paper .title {
   /*text-transform: uppercase; */
@@ -30,6 +58,17 @@ h4 {
 }
 .paper-buttons {
   margin-top: 5px;
+}
+.paper .authors,
+.paper .authors p {
+  color: #dd7a1d;
+  font-weight: bold;
+}
+.paper .authors p {
+  margin-bottom: 2px;
+}
+.paper .authors u {
+  color: #000;
 }
 .paper .button {
   display: inline-block;

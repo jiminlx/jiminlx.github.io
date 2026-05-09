@@ -42,9 +42,15 @@ title: Home
     <div class="tab-pane active" id="papers-selected">
       {% assign selected_papers = site.data.publications.papers | where:
       "selected", "y" %} {% for paper in selected_papers %}
-      <div class="paper">
+      <div class="paper {% if paper.thumbnail %}has-thumbnail{% endif %}">
+        {% if paper.thumbnail %}
+        <div class="paper-thumbnail">
+          <img src="{{ paper.thumbnail | prepend: site.baseurl }}" alt="{{ paper.title }}" />
+        </div>
+        {% endif %}
+        <div class="paper-content">
         <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors | markdownify }}</p>
+        <div class="authors">{{ paper.authors | markdownify }}</div>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
@@ -80,15 +86,22 @@ title: Home
           <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
           {% endif %}
         </div>
+        </div>
       </div>
       {% endfor %}
     </div>
 
     <div class="tab-pane" id="papers-all">
       {% for paper in site.data.publications.papers %}
-      <div class="paper">
+      <div class="paper {% if paper.thumbnail %}has-thumbnail{% endif %}">
+        {% if paper.thumbnail %}
+        <div class="paper-thumbnail">
+          <img src="{{ paper.thumbnail | prepend: site.baseurl }}" alt="{{ paper.title }}" />
+        </div>
+        {% endif %}
+        <div class="paper-content">
         <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors | markdownify }}</p>
+        <div class="authors">{{ paper.authors | markdownify }}</div>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
@@ -123,6 +136,7 @@ title: Home
           {% endif %} {% if paper.data %}
           <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
           {% endif %}
+        </div>
         </div>
       </div>
       {% endfor %}

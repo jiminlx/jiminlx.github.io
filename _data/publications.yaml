@@ -1,43 +1,89 @@
 papers:
+  - title: "RLDX-1 Technical Report"
+    authors: |
+      [Dongyoung Kim](https://kingdy2002.github.io/)<sup>*§</sup>,
+      [Huiwon Jang](https://huiwon-jang.github.io/)<sup>*§</sup>,
+      [Myungkyu Koo](https://myungkyukoo.github.io/)<sup>*</sup>,
+      [Suhyeok Jang](https://suhyeok-jang.github.io/)<sup>*</sup>,
+      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/)<sup>*</sup>,
+      Beomjun Kim,
+      Byungjun Yoon,
+      Changsung Jang,
+      [Daewon Choi](https://choidae1.github.io/),
+      Dongsu Han,
+      Donguk Lee,
+      Heeseung Kwon,
+      Hojin Jeon,
+      Jaehyun Kang,
+      Jaekyoung Bae,
+      Jihyuk Lee,
+      <u><strong>Jimin Lee</strong></u>,
+      John Won,
+      Joonwoo Ahn,
+      Junhyeong Park,
+      Junyoung Sung,
+      [Kyungmin Lee](https://kyungmnlee.github.io/),
+      Minseong Han,
+      Minsung Yoon,
+      Sejune Joo,
+      Seonil Son,
+      Seungcheol Park,
+      Seunggeun Cho,
+      Seungjun Moon,
+      Seungku Kim,
+      Yonghoon Dong,
+      Yongjin Cho,
+      Youngchan Kim,
+      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)<sup>§</sup>
+    venue: "RLWRLD Technical Report, 2026"
+    thumbnail: "assets/papers/rldx1.png"
+    paper_pdf: "https://arxiv.org/abs/2605.03269"
+    website: "https://www.rlwrld.ai/ko/rldx-1"
+    code: "https://github.com/RLWRLD/RLDX-1"
+    selected: y
+
   - title: "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models"
     authors: |
-      <u><strong>Jimin Lee</strong></u>, 
+      <u><strong>Jimin Lee</strong></u>,
       [Huiwon Jang](https://huiwon-jang.github.io/),
       [Myungkyu Koo](https://myungkyukoo.github.io/),
       Jungwoo Park,
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
     venue: "Preprint"
+    thumbnail: "assets/papers/MoSS.png"
     paper_pdf: "https://arxiv.org/abs/2604.23272"
     website: "https://jiminlx.github.io/MoSS/"
     selected: y
-    
+
   - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
     authors: |
-      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/), 
-      <u><strong>Jimin Lee</strong></u>, 
-      [Myungkyu Koo](https://myungkyukoo.github.io/), 
-      [Dongyoung Kim](https://kingdy2002.github.io/), 
-      [Kyungmin Lee](https://kyungmnlee.github.io/), 
-      [Changyeon Kim](https://changyeon.site/), 
-      [Younggyo Seo](https://younggyo.me/), 
+      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/),
+      <u><strong>Jimin Lee</strong></u>,
+      [Myungkyu Koo](https://myungkyukoo.github.io/),
+      [Dongyoung Kim](https://kingdy2002.github.io/),
+      [Kyungmin Lee](https://kyungmnlee.github.io/),
+      [Changyeon Kim](https://changyeon.site/),
+      [Younggyo Seo](https://younggyo.me/),
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
     venue: "International Conference on Machine Learning (ICML), 2026"
+    thumbnail: "assets/papers/rs_cl.png"
     paper_pdf: "https://arxiv.org/abs/2510.01711"
     selected: y
-    
+
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
     authors: |
-      [Daewon Choi](https://choidae1.github.io/), 
-      <u><strong>Jimin Lee</strong></u>, 
-      [Jihoon Tack](https://jihoontack.github.io/), 
-      [Woomin Song](https://woominsong.github.io/), 
-      [Saket Dingliwal](https://www.linkedin.com/in/saket-dingliwal/), 
-      [Sai Muralidhar Jayanthi](https://www.linkedin.com/in/sai-murali/), 
-      [Bhavana Ganesh](https://www.linkedin.com/in/bhavanaganesh/), 
-      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html), 
-      [Aram Galstyan](https://www.isi.edu/people-galstyan/), 
+      [Daewon Choi](https://choidae1.github.io/),
+      <u><strong>Jimin Lee</strong></u>,
+      [Jihoon Tack](https://jihoontack.github.io/),
+      [Woomin Song](https://woominsong.github.io/),
+      [Saket Dingliwal](https://www.linkedin.com/in/saket-dingliwal/),
+      [Sai Muralidhar Jayanthi](https://www.linkedin.com/in/sai-murali/),
+      [Bhavana Ganesh](https://www.linkedin.com/in/bhavanaganesh/),
+      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html),
+      [Aram Galstyan](https://www.isi.edu/people-galstyan/),
       [Sravan Babu Bodapati](https://www.linkedin.com/in/justsravan/)
     venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025 (Findings)<br>ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
+    thumbnail: "assets/papers/think_clearly.png"
     paper_pdf: "https://arxiv.org/abs/2507.08806"
     poster: "assets/poster/think-clearly_poster.pdf"
     selected: y
@@ -45,5 +91,6 @@ papers:
   - title: "SoccerNet 2024 Challenges Results"
     authors: SoccerNet Challenge Participants
     venue: "CVPR Workshop on SoccerNet Challenge, 2024"
+    thumbnail: "assets/papers/soccernet.png"
     paper_pdf: "https://arxiv.org/abs/2409.10587"
     selected: y
