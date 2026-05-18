@@ -2,12 +2,15 @@ h4 {
   letter-spacing: 0.1rem;
 }
 .container {
-  max-width: 900px;
+  max-width: 830px;
 }
 .header {
   margin-top: 60px;
   margin-bottom: 60px;
   text-align: left;
+}
+.header img {
+  border-radius: 20px;
 }
 .main-description h1 {
   margin-bottom: 0px;
@@ -69,6 +72,46 @@ h4 {
 }
 .paper .authors u {
   color: #000;
+}
+.paper .authors-info {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  color: #aaa;
+  cursor: help;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+.paper .authors-info:hover {
+  color: #777;
+}
+.paper .authors-info .authors-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  max-width: 320px;
+  padding: 10px 14px;
+  background: #fff;
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: normal;
+  line-height: 1.4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  white-space: normal;
+  z-index: 10;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+.paper .authors-info:hover .authors-tooltip,
+.paper .authors-info:focus .authors-tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 .paper .button {
   display: inline-block;
