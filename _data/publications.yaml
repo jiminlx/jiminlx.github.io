@@ -6,6 +6,7 @@ papers:
       [Myungkyu Koo](https://myungkyukoo.github.io/),
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
     venue: "Preprint"
+    thumbnail: "assets/papers/ATQ.png"
     selected: y
 
   - title: "RLDX-1 Technical Report"
