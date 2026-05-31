@@ -1,4 +1,13 @@
 papers:
+  - title: "Adaptive Temporal Action Quantization for Vision-Language-Action Models"
+    authors: |
+      Hojin Jeon<sup>*</sup>,
+      <u><strong>Jimin Lee</strong></u><sup>*</sup>,
+      [Myungkyu Koo](https://myungkyukoo.github.io/),
+      [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
+    venue: "Preprint"
+    selected: y
+
   - title: "RLDX-1 Technical Report"
     authors: |
       [Dongyoung Kim](https://kingdy2002.github.io/)<sup>*§</sup>,
