@@ -51,12 +51,17 @@ title: Home
         <div class="paper-content">
         <p class="title"><b>{{ paper.title }}</b></p>
         <div class="authors">
+          {% if paper.authors_lead %}
+          <span class="authors-collapsed">{{ paper.authors_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}, and <a class="authors-toggle" role="button" tabindex="0">{{ paper.authors_more }} more authors</a>{% if paper.authors_last %}, {{ paper.authors_last | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span>
+          <span class="authors-full" hidden>{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+          {% else %}
           {{ paper.authors | markdownify }}
           {% if paper.authors_note %}
           <span class="authors-info" tabindex="0" aria-label="{{ paper.authors_note }}">
             <i class="fa-solid fa-circle-info"></i>
             <span class="authors-tooltip">{{ paper.authors_note }}</span>
           </span>
+          {% endif %}
           {% endif %}
         </div>
         <p><i>{{ paper.venue }}</i></p>
@@ -110,12 +115,17 @@ title: Home
         <div class="paper-content">
         <p class="title"><b>{{ paper.title }}</b></p>
         <div class="authors">
+          {% if paper.authors_lead %}
+          <span class="authors-collapsed">{{ paper.authors_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}, and <a class="authors-toggle" role="button" tabindex="0">{{ paper.authors_more }} more authors</a>{% if paper.authors_last %}, {{ paper.authors_last | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span>
+          <span class="authors-full" hidden>{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+          {% else %}
           {{ paper.authors | markdownify }}
           {% if paper.authors_note %}
           <span class="authors-info" tabindex="0" aria-label="{{ paper.authors_note }}">
             <i class="fa-solid fa-circle-info"></i>
             <span class="authors-tooltip">{{ paper.authors_note }}</span>
           </span>
+          {% endif %}
           {% endif %}
         </div>
         <p><i>{{ paper.venue }}</i></p>
@@ -209,3 +219,20 @@ title: Home
     <p>• <strong>{{ service.role }}:</strong> {{ service.event }}</p>
   {% endfor %}
 </div>
+
+<script>
+  document.addEventListener("click", function (e) {
+    var toggle = e.target.closest(".authors-toggle");
+    if (!toggle) return;
+    var authors = toggle.closest(".authors");
+    if (!authors) return;
+    authors.querySelector(".authors-collapsed").hidden = true;
+    authors.querySelector(".authors-full").hidden = false;
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    if (!e.target.classList || !e.target.classList.contains("authors-toggle")) return;
+    e.preventDefault();
+    e.target.click();
+  });
+</script>

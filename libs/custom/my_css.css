@@ -73,6 +73,17 @@ h4 {
 .paper .authors u {
   color: #000;
 }
+.paper .authors-toggle {
+  color: #999;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.paper .authors-toggle:hover {
+  color: #555;
+}
 .paper .authors-info {
   position: relative;
   display: inline-block;
