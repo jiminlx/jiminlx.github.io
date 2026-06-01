@@ -56,12 +56,12 @@ title: Home
           <span class="authors-full" hidden>{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
           {% else %}
           {{ paper.authors | markdownify }}
+          {% endif %}
           {% if paper.authors_note %}
           <span class="authors-info" tabindex="0" aria-label="{{ paper.authors_note }}">
             <i class="fa-solid fa-circle-info"></i>
             <span class="authors-tooltip">{{ paper.authors_note }}</span>
           </span>
-          {% endif %}
           {% endif %}
         </div>
         <p><i>{{ paper.venue }}</i></p>
@@ -120,12 +120,12 @@ title: Home
           <span class="authors-full" hidden>{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
           {% else %}
           {{ paper.authors | markdownify }}
+          {% endif %}
           {% if paper.authors_note %}
           <span class="authors-info" tabindex="0" aria-label="{{ paper.authors_note }}">
             <i class="fa-solid fa-circle-info"></i>
             <span class="authors-tooltip">{{ paper.authors_note }}</span>
           </span>
-          {% endif %}
           {% endif %}
         </div>
         <p><i>{{ paper.venue }}</i></p>

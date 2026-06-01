@@ -18,9 +18,10 @@ papers:
       [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/)<sup>*</sup>,
       ...,
       <u><strong>Jimin Lee</strong></u>
-    authors_more: 27
+    authors_more: 61
     authors_last: |
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)<sup>§</sup>
+    authors_note: "Jimin Lee contributed as a core member of this project."
     authors: |
       [Dongyoung Kim](https://kingdy2002.github.io/)<sup>*§</sup>,
       [Huiwon Jang](https://huiwon-jang.github.io/)<sup>*§</sup>,
@@ -55,6 +56,40 @@ papers:
       Yonghoon Dong,
       Yongjin Cho,
       Youngchan Kim,
+      Chang Hwan Kim,
+      Dohyeon Kim,
+      Heecheol Kim,
+      Heewon Lee,
+      Hensen Ahn,
+      Hyungkyu Ryu,
+      Hyunsoo Choi,
+      Hyunsoo Shin,
+      Jaeheon Jung,
+      Jaewoo Kim,
+      Jinwook Kim,
+      Joochul Chang,
+      Joonsoo Kim,
+      Junghun Park,
+      Jungwoo Park,
+      Junho Cho,
+      Junhyeok Park,
+      Junwon Lee,
+      Kangwook Lee,
+      Kwanghoon Kim,
+      Kyoungwhan Choe,
+      Manoj Bhadu,
+      Nayoung Oh,
+      Sangjun Kim,
+      Sangwoo Kim,
+      Seunghoon Shim,
+      Seunghyun Kim,
+      Seungjun Lee,
+      Seungyup Ka,
+      Sungryol Yang,
+      Wook Jung,
+      Yashu Shukla,
+      Yeonjae Lee,
+      Yeonwoo Bae,
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)<sup>§</sup>
     venue: "RLWRLD Technical Report, 2026"
     thumbnail: "assets/papers/rldx1.png"
