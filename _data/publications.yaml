@@ -1,7 +1,7 @@
 papers:
   - title: "Adaptive Temporal Action Quantization for Vision-Language-Action Models"
     authors: |
-      Hojin Jeon<sup>*</sup>,
+      [Hojin Jeon](https://www.linkedin.com/in/jeon-hojin-56695a18b/?locale=en_US)<sup>*</sup>,
       <u><strong>Jimin Lee</strong></u><sup>*</sup>,
       [Myungkyu Koo](https://myungkyukoo.github.io/),
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
@@ -15,7 +15,7 @@ papers:
       [Huiwon Jang](https://huiwon-jang.github.io/)<sup>*§</sup>,
       [Myungkyu Koo](https://myungkyukoo.github.io/)<sup>*</sup>,
       [Suhyeok Jang](https://suhyeok-jang.github.io/)<sup>*</sup>,
-      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/)<sup>*</sup>,
+      [Taeyoung Kim](https://ismty0805.github.io/)<sup>*</sup>,
       ...,
       <u><strong>Jimin Lee</strong></u>
     authors_more: 61
@@ -27,7 +27,7 @@ papers:
       [Huiwon Jang](https://huiwon-jang.github.io/)<sup>*§</sup>,
       [Myungkyu Koo](https://myungkyukoo.github.io/)<sup>*</sup>,
       [Suhyeok Jang](https://suhyeok-jang.github.io/)<sup>*</sup>,
-      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/)<sup>*</sup>,
+      [Taeyoung Kim](https://ismty0805.github.io/)<sup>*</sup>,
       Beomjun Kim,
       Byungjun Yoon,
       Changsung Jang,
@@ -35,7 +35,7 @@ papers:
       Dongsu Han,
       Donguk Lee,
       Heeseung Kwon,
-      Hojin Jeon,
+      [Hojin Jeon](https://www.linkedin.com/in/jeon-hojin-56695a18b/?locale=en_US),
       Jaehyun Kang,
       Jaekyoung Bae,
       Jihyuk Lee,
@@ -113,7 +113,7 @@ papers:
 
   - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
     authors: |
-      [Taeyoung Kim](https://www.linkedin.com/in/taeyoung-kim85/),
+      [Taeyoung Kim](https://ismty0805.github.io/),
       <u><strong>Jimin Lee</strong></u>,
       [Myungkyu Koo](https://myungkyukoo.github.io/),
       [Dongyoung Kim](https://kingdy2002.github.io/),
