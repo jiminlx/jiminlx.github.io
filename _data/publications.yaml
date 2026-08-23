@@ -124,6 +124,7 @@ papers:
     venue: "International Conference on Machine Learning (ICML), 2026"
     thumbnail: "assets/papers/rs_cl.png"
     paper_pdf: "https://arxiv.org/abs/2510.01711"
+    website: "https://ismty0805.github.io/rscl/"
     selected: y
 
   - title: "Think Clearly: Improving Reasoning via Redundant Token Pruning"
