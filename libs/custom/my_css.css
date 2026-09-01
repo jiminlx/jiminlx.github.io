@@ -354,6 +354,20 @@ h4 {
 }
 
 
+/* 3D Robot Canvas */
+#robot-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+@media (max-width: 768px) {
+  #robot-canvas { display: none; }
+}
+
 /* Experience Styling */
 .exp-entry {
   margin-bottom: 1.5rem;

@@ -55,6 +55,19 @@
   <!--<link rel="stylesheet" href={{ "/libs/external/github-prettify-theme.css" | prepend: site.baseurl }}>-->
   <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
 
+  <!-- Three.js 3D Robot
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="importmap">
+  {
+      "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+          "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+          "urdf-loader": "https://esm.sh/urdf-loader@0.12.6?external=three"
+      }
+  }
+  </script>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
@@ -62,6 +75,9 @@
 
 </head>
 <body>
+
+  <!-- 3D robot background (Three.js) -->
+  <canvas id="robot-canvas"></canvas>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -148,6 +164,8 @@
 
   <!-- do not remove -->
   <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
+
+  <script type="module" src="{{ site.baseurl }}/static/js/robot.js"></script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

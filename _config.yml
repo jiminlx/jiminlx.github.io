@@ -3,6 +3,9 @@ destination: ./_site
 includes: ./_includes
 baseurl: ""
 
+include:
+  - static
+
 collections:
   projects:
     output: true
