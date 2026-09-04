@@ -11,8 +11,7 @@ const CONFIG = {
     ikIterations: 4,
     ikDamping: 0.4,
     targetEase: 0.12,
-    eefSize: 0.14,
-    eefFaceOffset: [0, Math.PI, 0],
+    fingerOpen: 0.02,
 };
 
 const canvas = document.getElementById('robot-canvas');
@@ -23,101 +22,14 @@ if (canvas && !reduceMotion && !isMobile) {
     initRobot(canvas).catch(err => console.error('[robot] init failed:', err));
 }
 
-function createTactileTexture() {
-    var size = 256;
-    var cvs = document.createElement('canvas');
-    cvs.width = size; cvs.height = size;
-    var ctx = cvs.getContext('2d');
-    var texture = new THREE.CanvasTexture(cvs);
-
-    var blobs = [
-        { bx: 128, by: 80,  r: 60, c: [255, 90, 60],  p: 0 },
-        { bx: 85,  by: 145, r: 48, c: [255, 200, 50],  p: 1.5 },
-        { bx: 170, by: 110, r: 44, c: [80, 230, 130],  p: 3.0 },
-        { bx: 128, by: 170, r: 52, c: [70, 140, 255],  p: 4.5 },
-        { bx: 138, by: 120, r: 30, c: [255, 255, 210],  p: 2.0 },
-    ];
-
-    function paint() {
-        var t = performance.now() * 0.001;
-        ctx.clearRect(0, 0, size, size);
-
-        ctx.fillStyle = '#5a78a8';
-        ctx.beginPath();
-        ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-        ctx.fill();
-
-        blobs.forEach(function (b) {
-            var tt = t + b.p;
-            var x = b.bx + Math.sin(tt * 0.7) * 10;
-            var y = b.by + Math.cos(tt * 0.5) * 10;
-            var r = b.r + Math.sin(tt * 1.1) * 6;
-            var a = 0.8 + Math.sin(tt * 0.9) * 0.15;
-            var g = ctx.createRadialGradient(x, y, 0, x, y, r);
-            g.addColorStop(0, 'rgba(' + b.c[0] + ',' + b.c[1] + ',' + b.c[2] + ',' + a + ')');
-            g.addColorStop(0.55, 'rgba(' + b.c[0] + ',' + b.c[1] + ',' + b.c[2] + ',' + (a * 0.4) + ')');
-            g.addColorStop(1, 'transparent');
-            ctx.fillStyle = g;
-            ctx.beginPath();
-            ctx.arc(x, y, r, 0, Math.PI * 2);
-            ctx.fill();
+function tweakMaterials(obj) {
+    obj.traverse(function (o) {
+        if (!o.material) return;
+        (Array.isArray(o.material) ? o.material : [o.material]).forEach(function (m) {
+            if ('shininess' in m) m.shininess = 0;
+            if (m.specular) m.specular.setHex(0x000000);
         });
-
-        ctx.globalCompositeOperation = 'destination-in';
-        ctx.fillStyle = '#fff';
-        ctx.beginPath();
-        ctx.arc(size / 2, size / 2, size / 2 - 2, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.globalCompositeOperation = 'source-over';
-
-        texture.needsUpdate = true;
-    }
-
-    paint();
-    setInterval(paint, 120);
-    return texture;
-}
-
-function createTactileSensor() {
-    var group = new THREE.Group();
-
-    var bodyGeo = new THREE.CylinderGeometry(0.027, 0.030, 0.045, 32);
-    bodyGeo.rotateX(Math.PI / 2);
-    var bodyMat = new THREE.MeshBasicMaterial({ color: 0x555560 });
-    group.add(new THREE.Mesh(bodyGeo, bodyMat));
-
-    var gelGeo = new THREE.CircleGeometry(0.026, 48);
-    var gelMat = new THREE.MeshBasicMaterial({
-        map: createTactileTexture(),
-        side: THREE.DoubleSide,
-        transparent: true
     });
-    var gel = new THREE.Mesh(gelGeo, gelMat);
-    gel.position.z = 0.026;
-    group.add(gel);
-
-    var rimGeo = new THREE.TorusGeometry(0.026, 0.003, 8, 48);
-    var rimMat = new THREE.MeshBasicMaterial({ color: 0x999999 });
-    var rim = new THREE.Mesh(rimGeo, rimMat);
-    rim.position.z = 0.026;
-    group.add(rim);
-
-    var ledColors = [0xff4444, 0x44ff66, 0x4488ff];
-    ledColors.forEach(function (c, i) {
-        var led = new THREE.Mesh(
-            new THREE.SphereGeometry(0.004, 8, 8),
-            new THREE.MeshBasicMaterial({ color: c })
-        );
-        var ang = (i / 3) * Math.PI * 2 - Math.PI / 2;
-        led.position.set(Math.cos(ang) * 0.022, Math.sin(ang) * 0.022, 0.020);
-        group.add(led);
-    });
-
-    var box = new THREE.Box3().setFromObject(group);
-    var maxDim = Math.max.apply(null, box.getSize(new THREE.Vector3()).toArray());
-    group.scale.setScalar(CONFIG.eefSize / (maxDim || 1));
-
-    return group;
 }
 
 async function initRobot(canvas) {
@@ -136,11 +48,11 @@ async function initRobot(canvas) {
 
     var robot = null;
     var eef = null;
-    var eefModel = null;
     var framed = false;
     var pointer = { x: 0, y: 0 };
 
     var manager = new THREE.LoadingManager();
+    var colladaLoader = new ColladaLoader(manager);
     var loader = new URDFLoader(manager);
     loader.loadMeshCb = function (path, mgr, done) {
         new ColladaLoader(mgr).load(
@@ -163,23 +75,44 @@ async function initRobot(canvas) {
     });
     pivot.add(robot);
 
-    robot.traverse(function (o) {
-        if (o.material) {
-            (Array.isArray(o.material) ? o.material : [o.material]).forEach(function (m) {
-                if ('shininess' in m) m.shininess = 0;
-                if (m.specular) m.specular.setHex(0x000000);
-            });
-        }
+    var eefLink = robot.links['panda_link8'] || robot.links['panda_link7'];
+
+    var handGroup = new THREE.Group();
+    handGroup.rotation.z = -Math.PI / 4;
+    eefLink.add(handGroup);
+
+    colladaLoader.load('./static/models/franka/meshes/visual/hand.dae', function (c) {
+        tweakMaterials(c.scene);
+        handGroup.add(c.scene);
     });
 
-    var eefLink = robot.links['panda_link8'] || robot.links['panda_link7'];
-    try { eefModel = createTactileSensor(); scene.add(eefModel); }
-    catch (err) { console.error('[robot] sensor model failed:', err); }
+    var leftFinger = new THREE.Group();
+    leftFinger.position.set(0, CONFIG.fingerOpen, 0.0584);
+    handGroup.add(leftFinger);
+
+    var rightFinger = new THREE.Group();
+    rightFinger.position.set(0, -CONFIG.fingerOpen, 0.0584);
+    handGroup.add(rightFinger);
+
+    colladaLoader.load('./static/models/franka/meshes/visual/finger.dae', function (c) {
+        tweakMaterials(c.scene);
+        leftFinger.add(c.scene);
+    });
+
+    colladaLoader.load('./static/models/franka/meshes/visual/finger.dae', function (c) {
+        tweakMaterials(c.scene);
+        c.scene.rotation.z = Math.PI;
+        rightFinger.add(c.scene);
+    });
+
     eef = new THREE.Object3D();
-    eef.position.set(0, 0, 0.06);
+    eef.position.set(0, 0, 0.12);
     eefLink.add(eef);
 
     await allLoaded;
+
+    tweakMaterials(robot);
+
     {
         robot.updateMatrixWorld(true);
         var box = new THREE.Box3().setFromObject(pivot);
@@ -262,15 +195,6 @@ async function initRobot(canvas) {
             if (!seeded) { smooth.copy(target); seeded = true; }
             smooth.lerp(target, CONFIG.targetEase);
             solveIK();
-            if (eefModel) {
-                eef.getWorldPosition(_ee);
-                eefModel.position.copy(_ee);
-                eefModel.lookAt(camera.position);
-                var fo = CONFIG.eefFaceOffset;
-                eefModel.rotateX(fo[0]);
-                eefModel.rotateY(fo[1]);
-                eefModel.rotateZ(fo[2]);
-            }
         }
         renderer.render(scene, camera);
     }
