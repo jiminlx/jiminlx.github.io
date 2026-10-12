@@ -1,12 +1,12 @@
 papers:
-  - title: "Adaptive Temporal Action Quantization for Vision-Language-Action Models"
+  - title: "PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models"
     authors: |
       [Hojin Jeon](https://www.linkedin.com/in/jeon-hojin-56695a18b/?locale=en_US)<sup>*</sup>,
       <u><strong>Jimin Lee</strong></u><sup>*</sup>,
       [Myungkyu Koo](https://myungkyukoo.github.io/),
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
     venue: "Preprint"
-    thumbnail: "assets/papers/ATQ.png"
+    thumbnail: "assets/papers/PaceVLA.png"
     selected: y
 
   - title: "RLDX-1 Technical Report"
@@ -16,7 +16,6 @@ papers:
       [Myungkyu Koo](https://myungkyukoo.github.io/)<sup>*</sup>,
       [Suhyeok Jang](https://suhyeok-jang.github.io/)<sup>*</sup>,
       [Taeyoung Kim](https://ismty0805.github.io/)<sup>*</sup>,
-      ...,
       <u><strong>Jimin Lee</strong></u>
     authors_more: 61
     authors_last: |
@@ -105,7 +104,7 @@ papers:
       [Myungkyu Koo](https://myungkyukoo.github.io/),
       Jungwoo Park,
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
-    venue: "Conference on Robot Learning (CoRL), 2026"
+    venue: "CoRL 2026"
     thumbnail: "assets/papers/MoSS.png"
     paper_pdf: "https://arxiv.org/abs/2604.23272"
     website: "https://jiminlx.github.io/MoSS/"
@@ -121,7 +120,7 @@ papers:
       [Changyeon Kim](https://changyeon.site/),
       [Younggyo Seo](https://younggyo.me/),
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
-    venue: "International Conference on Machine Learning (ICML), 2026"
+    venue: "ICML 2026"
     thumbnail: "assets/papers/rs_cl.png"
     paper_pdf: "https://arxiv.org/abs/2510.01711"
     website: "https://ismty0805.github.io/rscl/"
@@ -139,7 +138,7 @@ papers:
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html),
       [Aram Galstyan](https://www.isi.edu/people-galstyan/),
       [Sravan Babu Bodapati](https://www.linkedin.com/in/justsravan/)
-    venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025 (Findings)<br>ICML Workshop on Efficient Systems for Foundation Models (ES-FoMo III), 2025"
+    venue: "EMNLP 2025 (Findings)"
     thumbnail: "assets/papers/think_clearly.png"
     paper_pdf: "https://arxiv.org/abs/2507.08806"
     poster: "assets/poster/think-clearly_poster.pdf"
@@ -147,7 +146,7 @@ papers:
 
   - title: "SoccerNet 2024 Challenges Results"
     authors: SoccerNet Challenge Participants
-    venue: "CVPR Workshop on SoccerNet Challenge, 2024"
+    venue: "CVPR 2024 SoccerNet Challenge Workshop"
     thumbnail: "assets/papers/soccernet.png"
     paper_pdf: "https://arxiv.org/abs/2409.10587"
     selected: y

@@ -16,8 +16,8 @@ title: Home
     I received my B.S. in Computer Science & Engineering at Korea University in 2025.<br><br>
 
     My goal is to build intelligent systems that can perceive, understand, and interact with the world in a human-like manner.
-    To this end, my research focuses on Robotics Foundation Models and Vision-Language-Action (VLA) Models.
-    In particular, I am interested in extending VLA models with additional multimodal inputs that enable better cross-modal alignment and more precise robot control. 
+    To this end, my research focuses on Robotics Foundation Models, such as Vision-Language-Action (VLA) and World-Action (WAM) models.
+    In particular, I am interested in extending these models with additional multimodal inputs that enable better cross-modal alignment and more precise robot control.
   </p>
 </div>
 
@@ -51,8 +51,7 @@ Most recent publications on
         <p class="title"><b>{{ paper.title }}</b></p>
         <div class="authors">
           {% if paper.authors_lead %}
-          <span class="authors-collapsed">{{ paper.authors_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}, and <a class="authors-toggle" role="button" tabindex="0">{{ paper.authors_more }} more authors</a>{% if paper.authors_last %}, {{ paper.authors_last | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span>
-          <span class="authors-full" hidden>{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+          <span class="authors-collapsed">{{ paper.authors_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}, and <span class="authors-meta">{{ paper.authors_more }} more authors</span>{% if paper.authors_last %}, {{ paper.authors_last | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span>
           {% else %}
           {{ paper.authors | markdownify }}
           {% endif %}
@@ -63,7 +62,7 @@ Most recent publications on
           </span>
           {% endif %}
         </div>
-        <p><i>{{ paper.venue }}</i></p>
+        <p>{% if paper.venue == "Preprint" %}<i>{{ paper.venue }}</i>{% else %}<b>{{ paper.venue }}</b>{% endif %}</p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
           <a
@@ -115,8 +114,7 @@ Most recent publications on
         <p class="title"><b>{{ paper.title }}</b></p>
         <div class="authors">
           {% if paper.authors_lead %}
-          <span class="authors-collapsed">{{ paper.authors_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}, and <a class="authors-toggle" role="button" tabindex="0">{{ paper.authors_more }} more authors</a>{% if paper.authors_last %}, {{ paper.authors_last | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span>
-          <span class="authors-full" hidden>{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+          <span class="authors-collapsed">{{ paper.authors_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}, and <span class="authors-meta">{{ paper.authors_more }} more authors</span>{% if paper.authors_last %}, {{ paper.authors_last | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</span>
           {% else %}
           {{ paper.authors | markdownify }}
           {% endif %}
@@ -127,7 +125,7 @@ Most recent publications on
           </span>
           {% endif %}
         </div>
-        <p><i>{{ paper.venue }}</i></p>
+        <p>{% if paper.venue == "Preprint" %}<i>{{ paper.venue }}</i>{% else %}<b>{{ paper.venue }}</b>{% endif %}</p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
           <a
@@ -219,19 +217,3 @@ Most recent publications on
   {% endfor %}
 </div>
 
-<script>
-  document.addEventListener("click", function (e) {
-    var toggle = e.target.closest(".authors-toggle");
-    if (!toggle) return;
-    var authors = toggle.closest(".authors");
-    if (!authors) return;
-    authors.querySelector(".authors-collapsed").hidden = true;
-    authors.querySelector(".authors-full").hidden = false;
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key !== "Enter" && e.key !== " ") return;
-    if (!e.target.classList || !e.target.classList.contains("authors-toggle")) return;
-    e.preventDefault();
-    e.target.click();
-  });
-</script>
