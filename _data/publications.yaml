@@ -10,8 +10,9 @@ papers:
       Jinmo Koo,
       Joonwoo Ahn,
       [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)
-    venue: "Preprint"
     thumbnail: "assets/papers/PaceVLA.png"
+    paper_pdf: "https://arxiv.org/abs/2610.25961"
+    website: "https://pacevla.github.io/"
     selected: y
 
   - title: "RLDX-1 Technical Report"

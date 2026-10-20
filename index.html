@@ -62,7 +62,7 @@ Most recent publications on
           </span>
           {% endif %}
         </div>
-        <p>{% if paper.venue == "Preprint" %}<i>{{ paper.venue }}</i>{% else %}<b>{{ paper.venue }}</b>{% endif %}</p>
+        {% if paper.venue %}<p>{% if paper.venue == "Preprint" %}<i>{{ paper.venue }}</i>{% else %}<b>{{ paper.venue }}</b>{% endif %}</p>{% endif %}
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
           <a
@@ -125,7 +125,7 @@ Most recent publications on
           </span>
           {% endif %}
         </div>
-        <p>{% if paper.venue == "Preprint" %}<i>{{ paper.venue }}</i>{% else %}<b>{{ paper.venue }}</b>{% endif %}</p>
+        {% if paper.venue %}<p>{% if paper.venue == "Preprint" %}<i>{{ paper.venue }}</i>{% else %}<b>{{ paper.venue }}</b>{% endif %}</p>{% endif %}
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
           <a
